@@ -1,4 +1,5 @@
 import styles from './Main.module.css';
+import { Link } from 'react-router-dom';
 
 
 const Main = () => {
@@ -6,7 +7,7 @@ const Main = () => {
     <>
       <main>
         <div className={styles['product-container']} id="products">
-          <a className={styles['product-card']} href="./details.html">
+          <Link className={styles['product-card']} to="/details">
             <img
               className={styles['product-img']}
               src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
@@ -23,8 +24,8 @@ const Main = () => {
                 Incluye impuesto País y percepción AFIP
               </div>
             </div>
-          </a>
-          <a className={styles['product-card']} href="./details.html">
+          </Link>
+          <Link className={styles['product-card']} to="/details">
             <img
               className={styles['product-img']}
               src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
@@ -41,8 +42,8 @@ const Main = () => {
                 Incluye impuesto País y percepción AFIP
               </div>
             </div>
-          </a>
-          <a className={styles['product-card']} href="./details.html">
+          </Link>
+          <Link className={styles['product-card']} to="/details">
             <img
               className={styles['product-img']}
               src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
@@ -59,8 +60,8 @@ const Main = () => {
                 Incluye impuesto País y percepción AFIP
               </div>
             </div>
-          </a>
-          <a className={styles['product-card']} href="./details.html">
+          </Link>
+          <Link className={styles['product-card']} to="/details">
             <img
               className={styles['product-img']}
               src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
@@ -77,8 +78,8 @@ const Main = () => {
                 Incluye impuesto País y percepción AFIP
               </div>
             </div>
-          </a>
-          <a className={styles['product-card']} href="./details.html">
+          </Link>
+          <Link className={styles['product-card']} to="/details">
             <img
               className={styles['product-img']}
               src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
@@ -95,8 +96,8 @@ const Main = () => {
                 Incluye impuesto País y percepción AFIP
               </div>
             </div>
-          </a>
-          <a className={styles['product-card']} href="./details.html">
+          </Link>
+          <Link className={styles['product-card']} to="/details">
             <img
               className={styles['product-img']}
               src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
@@ -113,7 +114,7 @@ const Main = () => {
                 Incluye impuesto País y percepción AFIP
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </main>
     </>

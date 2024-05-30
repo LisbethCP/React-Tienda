@@ -1,15 +1,18 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styles from './App.module.css';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import Details from './views/Details';
+import NotFound from './views/NotFound';
 
 
 const Home = () => {
   return (
     <>
         <div className={styles['header-container']}>
-          <a href="./index.html" className={styles['header-logo']}>
+          <a href="./" className={styles['header-logo']}>
             <img
               className={styles['header-logo-img']}
               src="/tiendamia-logo.svg"
@@ -59,16 +62,26 @@ const Home = () => {
 
 function App() {
   return (
-    <>
+    <Router>
       <header>
         <Home />
         <NavBar />
       </header>
-      <Hero />
-      <Main />
+      <Routes>
+        <Route path="/" element={<HomeWrapper />} />
+        <Route path="/details/:id" element={<Details />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 
-export default App
+const HomeWrapper = () => (
+  <>
+    <Hero first="tecnología" second="renovada" />
+    <Main />
+  </>
+);
+
+export default App;
