@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
         <div className={styles['header-container']}>
-          <a href="./" className={styles['header-logo']}>
+          <a href="/" className={styles['header-logo']}>
             <img
               className={styles['header-logo-img']}
               src="/tiendamia-logo.svg"
